@@ -177,6 +177,61 @@ Cytowanie:
 
 ---
 
+## Adversus haereses (`adversus-haereses/`)
+
+5 plików PDF — Ireneusz z Lyonu, *Adversus haereses* (*Against Heresies* / Przeciw herezjom), tekst angielski z polskim tłumaczeniem. Łącznie 736 stron.
+
+| Plik | Zawartość | Strony |
+|------|-----------|--------|
+| `ah-book-1.pdf` | Księga I | 125 |
+| `ah-book-2.pdf` | Księga II | 163 |
+| `ah-book-3.pdf` | Księga III | 128 |
+| `ah-book-4.pdf` | Księga IV | 190 |
+| `ah-book-5.pdf` | Księga V | 130 |
+
+Każdy PDF zawiera okładkę, stronę źródeł, przedmowę, nagłówki rozdziałów oraz segmenty w układzie PL + EN. Segment = jeden numerowany akapit (kanoniczny ref `księga.rozdz.sekcja`, np. `1.26.3`); 779 segmentów, 168 rozdziałów + 5 przedmów (173 strony źródłowe).
+
+### Źródła i licencje
+
+**Tekst źródłowy — Ante-Nicene Fathers, Vol. 1 (1885)**
+
+- Autor / dzieło: Ireneusz z Lyonu, *Adversus haereses*, 5 ksiąg
+- Przekład EN: Alexander Roberts & William Rambaut, red. A. Roberts, J. Donaldson
+- Serwis: New Advent — https://www.newadvent.org/fathers/0103.htm
+- Licencja tekstu EN: **Public Domain** (publikacja USA przed 1930); stopka copyright New Advent dotyczy serwisu — użytek naukowy z pełną atrybucją
+- Uwaga: grecki oryginał zaginiony poza fragmentami Ks. I — źródłem przekładu jest ANF 1885 (łacina/ang. za pośrednictwem ANF), co jest jawnie oznaczone
+
+Cytowanie:
+> Irenaeus of Lyon. Against Heresies (Ante-Nicene Fathers, Vol. 1), przekład Alexander Roberts & William Rambaut. 1885. Źródło: New Advent, https://www.newadvent.org/fathers/0103.htm, snapshot 2026-09-28.
+
+**Snapshot**
+
+- Data: 2026-09-28
+- Zakres: 173 strony = 168 rozdziałów + 5 przedmów (Ks. I–V)
+- Pliki: `html/0103XXX.htm`, 2 982 608 B łącznie; pin: `manifest.json` (URL, bajty, sha256 per strona)
+- `sha256(manifest.json)`: `aa37b3b9a6cd84414cf333463d76835542cd17cec2d8cb13f4d7d61828579e2c`
+- Odświeżenie: `npx tsx scripts/prepare-ah.ts` (pomija istniejące pliki) / `… --force` (ponowne pobranie)
+
+**Wykluczone jako źródło:**
+
+- Greka — oryginał zaginiony poza fragmentami Ks. I; Perseus/TLG `urn:cts:greekLit:tlg1447.tlg001.1st1K-grc1` to wycinek (21 383 tokeny)
+- CCEL — licencja non-commercial (wykluczony też przy AF)
+- Polskie przekłady chronione (tylko referencja przy QA): Brylowski, *Adversus haereses*, Bernardinum 2018; Myszor, *Ireneusz z Lyonu i gnostycy* (Ks. I–II), SACh SN 17, Katowice 2016
+- Łacina (archive.org OCR, wyd. Rzym 1907 / Harvey 1857) — źródło kontrolne QA, nie jest częścią snapshotu
+
+**Opracowanie polskie**
+
+- Tłumaczenie: Przemysław Sołtan (Scripture.pl) — przemyslaw.soltan@gmail.com
+- Metoda: pipeline `module.cat` (EN → PL, glosariusz gnostycki, warstwa scripture, walidacja 779/779 segmentów)
+- Licencja polskiego przekładu: CC BY-SA 4.0
+- Status: draft (wersja robocza)
+
+**Polskie konwencje nazw**
+
+`names.json` z `module.interline/data/literary/` + słownik Stronga greckiego PL + glosariusz gnostycki AH (`terms.json`) — kanoniczne formy polskie w korpusie.
+
+---
+
 ## Leksykony (`lexicons/`)
 
 | Plik | Opis |
